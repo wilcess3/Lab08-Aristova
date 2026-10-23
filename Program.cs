@@ -51,7 +51,7 @@
 
 
 //итоговая задача
-// Calculator();
+Calculator();
 
 
 //доп задание 
@@ -76,17 +76,17 @@
 // }
 
 //Задание 2.1
-// static int Max(int a,int b)
-// {
-//     if (a > b)
-//     {
-//         return a;
-//     }
-//     else
-//     {
-//         return b;
-//     }
-// }
+static int Max(int a,int b)
+{
+    if (a > b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
 
 
 //Задание 2.2
@@ -127,15 +127,15 @@
 // }
 
 //Заданиe 5
-//  static long Factorial(int n) 
-//     {
-//         long result = 1;
-//         for (int i = 1; i <= n; i++) 
-//         {
-//             result *= i;
-//         }
-//         return result;
-//     }
+ static long Factorial(int n) 
+    {
+        long result = 1;
+        for (int i = 1; i <= n; i++) 
+        {
+            result *= i;
+        }
+        return result;
+    }
 
 // static bool IsPrime(int n) 
 // {
@@ -156,72 +156,71 @@
 
 
 //Задание 6
-// static int ReadPositive(string message) 
-// {
-//     int answer;
-//     do 
-//     {
-//         Console.Write(message);
-//         answer = Convert.ToInt32(Console.ReadLine());
-//     } 
-//     while (answer <= 0);
+static int ReadPositive(string message) 
+{
+    int answer;
+    do 
+    {
+        Console.Write(message);
+        answer = Convert.ToInt32(Console.ReadLine());
+    } 
+    while (answer <= 0);
         
-//     return answer;
-// }
+    return answer;
+}
 
 
 //Итоговая задача
-// static void Calculator()
-// {
-//     int choice = -1;
-//     do
-//     {
-//         Console.WriteLine();
-//         Console.WriteLine("1 - Сумма");
-//         Console.WriteLine("2 - Максимум");
-//         Console.WriteLine("3 - Факториал");
-//         Console.WriteLine("0 - Выход");
-//         Console.Write("Выберите пункт: ");
+static void Calculator()
+{
+    int choice = -1;
+    do
+    {
+        Console.WriteLine();
+        Console.WriteLine("1 - Сумма");
+        Console.WriteLine("2 - Максимум");
+        Console.WriteLine("3 - Факториал");
+        Console.WriteLine("0 - Выход");
+        Console.Write("Выберите пункт: ");
 
-//         choice = int.Parse(Console.ReadLine());
+        choice = int.Parse(Console.ReadLine());
 
-//         switch (choice)
-//         {
-//             case 1:
-//                 Console.Write("a = ");
-//                 int x = int.Parse(Console.ReadLine());
-//                 Console.Write("b = ");
-//                 int y = int.Parse(Console.ReadLine());
-//                 int sum = x + y;
-//                 Console.WriteLine("Сумма = " + sum);
-//                 break;
+        switch (choice)
+        {
+            case 1:
+                Console.Write("a = ");
+                int x = int.Parse(Console.ReadLine());
+                Console.Write("b = ");
+                int y = int.Parse(Console.ReadLine());
+                int sum = x + y;
+                Console.WriteLine("Сумма = " + sum);
+                break;
 
-//             case 2:
-//                 Console.Write("a = ");
-//                 int m = int.Parse(Console.ReadLine());
-//                 Console.Write("b = ");
-//                 int n = int.Parse(Console.ReadLine());
-//                 int max = Max(m, n);
-//                 Console.WriteLine("Максимум = " + max);
-//                 break;
+            case 2:
+                Console.Write("a = ");
+                int m = int.Parse(Console.ReadLine());
+                Console.Write("b = ");
+                int n = int.Parse(Console.ReadLine());
+                int max = Max(m, n);
+                Console.WriteLine("Максимум = " + max);
+                break;
 
-//             case 3:
-//                 int f = ReadPositive("Введите n: ");
-//                 long fact = Factorial(f);
-//                 Console.WriteLine("Факториал = " + fact);
-//                 break;
+            case 3:
+                int f = ReadPositive("Введите n: ");
+                long fact = Factorial(f);
+                Console.WriteLine("Факториал = " + fact);
+                break;
 
-//             case 0:
-//                 Console.WriteLine("Выход...");
-//                 break;
+            case 0:
+                Console.WriteLine("Выход...");
+                break;
 
-//             default:
-//                 Console.WriteLine("Нет такого пункта");
-//                 break;
-//         }
-//     } while (choice != 0);
-// }
-
+            default:
+                Console.WriteLine("Нет такого пункта");
+                break;
+        }
+    } while (choice != 0);
+}
 
 //доп задание
 // static int Gcd(int a, int b)
